@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="loadSearchProductForm" type="com.yourcompany.struts.form.LoadSearchProductForm" />
+    <form-bean name="searchProductForm" type="com.yourcompany.struts.form.SearchProductForm" />
+    <form-bean name="searchAvailForm" type="com.yourcompany.struts.form.SearchAvailForm" />
+    <form-bean name="searchOutfitForm" type="com.yourcompany.struts.form.SearchOutfitForm" />
+    <form-bean name="showBestAndHottestRatedForm" type="com.yourcompany.struts.form.ShowBestAndHottestRatedForm" />
+    <form-bean name="addReviewForm" type="com.yourcompany.struts.form.AddReviewForm" />
+    <form-bean name="loadAddReviewForm" type="com.yourcompany.struts.form.LoadAddReviewForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="loadSearchProductForm"
+      input="/index.jsp"
+      name="loadSearchProductForm"
+      path="/loadSearchProduct"
+      scope="request"
+      type="com.yourcompany.struts.action.LoadSearchProductAction">
+      <forward name="initProductSearch" path="/productSearch.jsp" />
+    </action>
+    <action
+      attribute="searchProductForm"
+      input="/productSearch.jsp"
+      name="searchProductForm"
+      path="/searchProduct"
+      scope="request"
+      type="com.yourcompany.struts.action.SearchProductAction">
+      <forward name="searchProduct" path="/productSearch.jsp" />
+    </action>
+    <action
+      attribute="searchAvailForm"
+      input="/productSearch.jsp"
+      name="searchAvailForm"
+      path="/searchAvailability"
+      scope="request"
+      type="com.yourcompany.struts.action.SearchAvailabilityAction">
+      <forward name="availResult" path="/productSearch.jsp" />
+    </action>
+    <action
+      attribute="searchOutfitForm"
+      input="/productSearch.jsp"
+      name="searchOutfitForm"
+      path="/searchOutfit"
+      scope="request"
+      type="com.yourcompany.struts.action.SearchOutfitAction">
+      <forward name="outfitResult" path="/productSearch.jsp" />
+    </action>
+    <action
+      attribute="showBestAndHottestRatedForm"
+      input="/index.jsp"
+      name="showBestAndHottestRatedForm"
+      path="/showBestAndMostRated"
+      scope="request"
+      type="com.yourcompany.struts.action.ShowBestAndMostRatedAction">
+      <forward name="result" path="/bestAndMostRated.jsp" />
+    </action>
+    <action
+      attribute="addReviewForm"
+      input="/addReview.jsp"
+      name="addReviewForm"
+      path="/addReview"
+      scope="request"
+      type="com.yourcompany.struts.action.AddReviewAction">
+      <forward name="addReviewResult" path="/addReview.jsp" />
+    </action>
+    <action
+      attribute="loadAddReviewForm"
+      input="/index.jsp"
+      name="loadAddReviewForm"
+      path="/loadAddReview"
+      scope="request"
+      type="com.yourcompany.struts.action.LoadAddReviewAction">
+      <forward name="addReview" path="/addReview.jsp" />
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+

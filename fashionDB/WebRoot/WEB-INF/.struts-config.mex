@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/loadSearchProduct.do" location="515,200" dimension="348,88" />
+  <StrutsActivity path="/searchProduct.do" location="825,345" dimension="322,88" />
+  <StrutsActivity path="/searchAvailability.do" location="825,525" dimension="340,88" />
+  <StrutsActivity path="/searchOutfit.do" location="315,540" dimension="312,88" />
+  <StrutsActivity path="/productSearch.jsp" location="630,360" dimension="134,49" />
+  <StrutsActivity path="/index.jsp" location="285,210" dimension="150,72" />
+  <StrutsActivity path="/showBestAndMostRated.do" location="120,360" dimension="374,88" />
+  <StrutsActivity path="/bestAndMostRated.jsp" location="105,570" dimension="157,49" />
+  <StrutsActivity path="/addReview.do" location="-120,45" dimension="304,88" />
+  <StrutsActivity path="/loadAddReview.do" location="-135,195" dimension="330,88" />
+  <StrutsActivity path="/addReview.jsp" location="270,120" dimension="114,49" />
+  <StrutsTransition id="/showBestAndMostRated.do,result,/bestAndMostRated.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="120,404" />
+      <AbsolutePoint location="-90,404" />
+      <AbsolutePoint location="-90,594" />
+      <AbsolutePoint location="105,594" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/productSearch.jsp,null,/searchProduct.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="697,360" />
+      <AbsolutePoint location="697,303" />
+      <AbsolutePoint location="986,303" />
+      <AbsolutePoint location="986,345" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchProduct.do,searchProduct,/productSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="825,384" />
+      <AbsolutePoint location="764,384" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.jsp,null,/showBestAndMostRated.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="360,282" />
+      <AbsolutePoint location="360,360" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loadSearchProduct.do,initProductSearch,/productSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="667,288" />
+      <AbsolutePoint location="667,360" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/productSearch.jsp,null,/searchAvailability.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="702,409" />
+      <AbsolutePoint location="702,599" />
+      <AbsolutePoint location="825,599" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.jsp,null,/loadSearchProduct.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="435,244" />
+      <AbsolutePoint location="515,244" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/productSearch.jsp,null,/searchOutfit.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="672,409" />
+      <AbsolutePoint location="672,599" />
+      <AbsolutePoint location="627,599" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loadAddReview.do,addReview,/addReview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="30,195" />
+      <AbsolutePoint location="30,148" />
+      <AbsolutePoint location="270,148" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchAvailability.do,availResult,/productSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="825,569" />
+      <AbsolutePoint location="732,569" />
+      <AbsolutePoint location="732,409" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="addReview.jsp,null,/addReview.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="270,89" />
+      <AbsolutePoint location="184,89" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchOutfit.do,outfitResult,/productSearch.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="627,569" />
+      <AbsolutePoint location="642,569" />
+      <AbsolutePoint location="642,409" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.jsp,null,/loadAddReview.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="285,239" />
+      <AbsolutePoint location="195,239" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addReview.jsp,null,/addReview.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="327,120" />
+      <AbsolutePoint location="327,59" />
+      <AbsolutePoint location="184,59" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addReview.do,addReviewResult,/addReview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="184,89" />
+      <AbsolutePoint location="297,89" />
+      <AbsolutePoint location="297,120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
